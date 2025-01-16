@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -47,9 +48,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'server.urls'
+
+# Allow your ReactJS frontend domain
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # ReactJS development server
+]
 
 TEMPLATES = [
     {
@@ -75,8 +82,15 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'website_fashion',
+        'CLIENT': {
+            'host': 'localhost',
+            'port': 27017,
+            'username' : '',
+            'password' : '',
+            'authSource' : 'admin'
+        }
     }
 }
 
