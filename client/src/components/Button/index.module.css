@@ -1,0 +1,7 @@
+.button_color {
+  background-color: var(--primary-color);
+}
+
+.button_border_color {
+  border-color: var(--primary-color);
+}

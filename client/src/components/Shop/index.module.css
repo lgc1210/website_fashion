@@ -1,0 +1,11 @@
+.primary_text {
+  color: var(--secondary-color);
+}
+
+.border_color {
+  border-color: var(--yellow-color);
+}
+
+.secondary_font {
+  font-family: var(--secondary-font);
+}

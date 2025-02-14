@@ -1,0 +1,15 @@
+.bg_banner {
+  background-color: var(--primary-color);
+}
+
+.yellow_text {
+  color: var(--yellow-color);
+}
+
+.secondary_font {
+  font-family: var(--secondary-font);
+}
+
+.button_border_color {
+  border-color: var(--yellow-color);
+}

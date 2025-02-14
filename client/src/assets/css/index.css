@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #32586d;
+  --secondary-color: #274b60;
+  --yellow-color: #e2bd99;
+  --light-yellow-color: #efe7e0;
+
+  --secondary-font: Syncopate, sans-serif;
+}
+
+html {
+  font-family: Jost, sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.authen-shadow {
+  box-shadow: 10px 10px 0 var(--secondary-color);
+}
+
+.toast-shadow {
+  box-shadow: 4px 4px 0 var(--secondary-color);
+}

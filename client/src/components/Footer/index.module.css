@@ -1,0 +1,13 @@
+.footer_bg {
+  background-color: var(--primary-color);
+}
+
+.button_bg_img {
+  background-image: url("../../assets/images/6548b8407d76af5bc7bf2952_Footer-social.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button_bg {
+  background-color: var(--yellow-color);
+}
