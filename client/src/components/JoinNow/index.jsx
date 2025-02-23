@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./index.module.css";
-import Button from "../../../components/Button";
-import FormInput from "../../../components/FormInput";
-import BackgroundImage from "../../../assets/images/65794644f0e04ebc87ba658d_CTA-image.png";
-import Video from "../../../assets/videos/654ddbab16c68ced7a749127_CTA-video-transcode.mp4";
+import Button from "../Button";
+import FormInput from "../FormInput";
+import BackgroundImage from "../../assets/images/65794644f0e04ebc87ba658d_CTA-image.png";
+import Video from "../../assets/videos/654ddbab16c68ced7a749127_CTA-video-transcode.mp4";
 
 const JoinNow = () => {
   return (

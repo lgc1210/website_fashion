@@ -1,6 +1,6 @@
 import React from "react";
-import vid from "../../../assets/videos/654dafca65324216537abf23_manquin-video-transcode.mp4";
-import Button from "../../../components/Button";
+import vid from "../../assets/videos/654dafca65324216537abf23_manquin-video-transcode.mp4";
+import Button from "../Button";
 import { BiRightArrow } from "react-icons/bi";
 
 const Story = () => {

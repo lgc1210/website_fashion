@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./index.module.css";
 import Products from "../Products";
-import Button from "../Button";
 
 const Shop = () => {
   return (

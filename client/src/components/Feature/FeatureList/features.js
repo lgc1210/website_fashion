@@ -1,9 +1,9 @@
-import shippingIcon from "../../../../assets/images/654df048c64337eb5a8a1877_Feature-image-01.svg";
-import bandTagsIcon from "../../../../assets/images/654df04870a762457244196f_Feature-image-02.svg";
-import retailIcon from "../../../../assets/images/654df0484d6f84884463022a_Feature-image-03.svg";
-import giftIcon from "../../../../assets/images/654df0485ae262947f078743_Feature-image-04.svg";
-import excellenceIcon from "../../../../assets/images/654df0488821229b01222d09_Feature-image-05.svg";
-import textureIcon from "../../../../assets/images/654df048fe72ac539a35c3ae_Feature-image-06.svg";
+import shippingIcon from "../../../assets/images/654df048c64337eb5a8a1877_Feature-image-01.svg";
+import bandTagsIcon from "../../../assets/images/654df04870a762457244196f_Feature-image-02.svg";
+import retailIcon from "../../../assets/images/654df0484d6f84884463022a_Feature-image-03.svg";
+import giftIcon from "../../../assets/images/654df0485ae262947f078743_Feature-image-04.svg";
+import excellenceIcon from "../../../assets/images/654df0488821229b01222d09_Feature-image-05.svg";
+import textureIcon from "../../../assets/images/654df048fe72ac539a35c3ae_Feature-image-06.svg";
 
 const features = [
   {

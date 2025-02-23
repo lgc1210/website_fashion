@@ -23,7 +23,7 @@ const Header = () => {
     <>
       <section className={`${styles.bg_banner} overflow-hidden`}>
         <div className='container mx-auto relative z-50 lg:px-0 px-4 2xl:overflow-hidden'>
-          <div className='max-w-6xl w-full mx-auto pt-20'>
+          <div className='max-w-6xl mx-auto w-full pt-20'>
             <Nav location={location} />
 
             <div className='pt-40 pb-64 relative z-10'>

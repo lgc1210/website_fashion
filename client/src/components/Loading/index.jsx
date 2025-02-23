@@ -1,11 +1,17 @@
 import React, { memo } from "react";
 
-const Loading = ({ size = 28, color = "#274b60" }) => {
+const Loading = ({
+  size = 28,
+  color = "#274b60",
+  spinStyle = "",
+  wrapSpinStyle = "",
+  hasLoadingText = false,
+}) => {
   return (
-    <div role='status'>
+    <div role='status' className={`${wrapSpinStyle}`}>
       <svg
         aria-hidden='true'
-        className={`text-gray-200 animate-spin dark:text-gray-600`}
+        className={`text-gray-200 animate-spin ${spinStyle}`}
         height={size}
         width={size}
         viewBox='0 0 100 101'
@@ -21,6 +27,7 @@ const Loading = ({ size = 28, color = "#274b60" }) => {
         />
       </svg>
       <span className='sr-only'>Loading...</span>
+      {hasLoadingText && <p className='mt-2 text-lg'>Loading ...</p>}
     </div>
   );
 };

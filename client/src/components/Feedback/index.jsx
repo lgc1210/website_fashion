@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
-import QuotationLeft from "../../../assets/images/654dbb5d161bb35eb5832368_Testimonial-left.svg";
-import QuotationRight from "../../../assets/images/654dbb21bd187659d9beb63f_Testimonial-right.svg";
+import QuotationLeft from "../../assets/images/654dbb5d161bb35eb5832368_Testimonial-left.svg";
+import QuotationRight from "../../assets/images/654dbb21bd187659d9beb63f_Testimonial-right.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

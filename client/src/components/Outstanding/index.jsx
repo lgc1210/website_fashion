@@ -1,9 +1,9 @@
 import React from "react";
-import Hero1 from "../../../assets/images/654a0a5b7b2ad94b9705bc4c_Home-category-01.jpg";
-import Hero2 from "../../../assets/images/654a0a5bd20b2802a817ce4f_Home-category-02.jpg";
-import Hero3 from "../../../assets/images/654a0a5ca1b2fa5315829448_Home-category-03.jpg";
-import Sale from "../../../assets/images/654a142508f8ca887f56da8a_Home-category-sale.png";
-import Button from "../../../components/Button";
+import Hero1 from "../../assets/images/654a0a5b7b2ad94b9705bc4c_Home-category-01.jpg";
+import Hero2 from "../../assets/images/654a0a5bd20b2802a817ce4f_Home-category-02.jpg";
+import Hero3 from "../../assets/images/654a0a5ca1b2fa5315829448_Home-category-03.jpg";
+import Sale from "../../assets/images/654a142508f8ca887f56da8a_Home-category-sale.png";
+import Button from "../Button";
 
 const Outstanding = () => {
   return (

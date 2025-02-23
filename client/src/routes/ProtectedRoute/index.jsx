@@ -13,7 +13,7 @@ const ProtectedRoute = ({ element: Element }) => {
     }
   }, []);
 
-  return <Element />;
+  return Element;
 };
 
 export default ProtectedRoute;

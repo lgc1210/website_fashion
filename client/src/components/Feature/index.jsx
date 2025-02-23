@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureList from "./FeatureList/";
+import FeatureList from "./FeatureList";
 import QuestionList from "./QuestionList";
 
 const Feature = () => {

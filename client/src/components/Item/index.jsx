@@ -1,5 +1,5 @@
 import React from "react";
-import ItemImage from "../../../assets/images/654e200787af46540ed1ae75_model-01.png";
+import ItemImage from "../../assets/images/654e200787af46540ed1ae75_model-01.png";
 import ItemDescription from "./ItemDescription";
 import itemDescriptionList from "./itemDescriptionList";
 

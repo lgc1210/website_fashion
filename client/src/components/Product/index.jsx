@@ -1,10 +1,18 @@
 import React from "react";
 import Button from "../Button";
 import { CiCirclePlus } from "react-icons/ci";
+import paths from "../../configs/paths";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
+  const navigate = useNavigate();
+
   return (
-    <li className='group flex flex-col gap-2 cursor-pointer'>
+    <li
+      className='group flex flex-col gap-2 cursor-pointer'
+      onClick={() =>
+        navigate(paths.productDetails, { state: { productId: product?.id } })
+      }>
       <div className='relative overflow-hidden'>
         <img
           src={product?.image}

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
-import Button from "../../../../components/Button";
+import Button from "../../Button";
 
 const ItemDescription = ({ positionStyle = "", description }) => {
   return (

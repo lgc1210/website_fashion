@@ -126,7 +126,7 @@ const Login = ({ isShow, onClose, onSwitchToRegister }) => {
           </div>
           <div>
             <Button
-              text={loginPending ? <Loading color='#274b60' /> : "login"}
+              text={!loginPending ? <Loading color='#274b60' /> : "login"}
               customStyle={`w-full py-4 justify-center border-2 border-black hover:bg-[#e2bd99] hover:text-white ${
                 loginPending
                   ? "opacity-50 cursor-not-allowed pointer-events-none"

@@ -7,6 +7,7 @@ import Cart from "../Cart";
 import { useAuth } from "../../../contexts/Auth";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
+import paths from "../../../configs/paths";
 
 const Nav = ({ location }) => {
   const [showCart, setShowCart] = useState(false);
@@ -17,20 +18,20 @@ const Nav = ({ location }) => {
 
   // Filter menu items based on authentication status
   const pagesChildren = [
-    { name: "FAQ", path: "/faq" },
-    { name: "Team", path: "/team" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "FAQ", path: paths.faq },
+    { name: "Team", path: paths?.team },
+    { name: "Blog", path: paths.blog },
+    { name: "Contact", path: paths.contact },
     ...(isAuthenticated()
-      ? [{ name: "Profile", path: "/profile/details" }, { name: "Logout" }] // Show Profile when logged in
+      ? [{ name: "Profile", path: paths.profileDetails }, { name: "Logout" }] // Show Profile when logged in
       : [{ name: "Login" }, { name: "Register" }]), // Show Login & Register when NOT logged in
   ];
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Shop", path: "/shop" },
-    { name: "Collections", path: "/collection" },
+    { name: "Home", path: paths.home },
+    { name: "About Us", path: paths.about },
+    { name: "Shop", path: paths.shop },
+    { name: "Collections", path: paths.collection },
     {
       name: "Pages",
       Icon: IoIosArrowDown,
@@ -50,7 +51,8 @@ const Nav = ({ location }) => {
       <nav
         className={`${styles.border_color} w-full border flex items-center relative z-40`}>
         <div
-          className={`${styles.border_color} border-r md:px-10 px-2 py-1 w-fit h-full`}>
+          className={`${styles.border_color} border-r md:px-10 px-2 py-1 w-fit h-full`}
+          onClick={() => handleNavigate(paths.home)}>
           <img
             src={Logo}
             alt='Logo'

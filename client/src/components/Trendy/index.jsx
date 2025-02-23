@@ -1,10 +1,10 @@
 import React from "react";
-import Background from "../../../assets/images/658ff46442ecf1f76a1fdfc0_retailflow-brand-new-logo.svg";
-import LookBook1 from "../../../assets/images/654dc55d6b3b83d9106b8fa2_Look-book-01.jpg";
-import LookBook2 from "../../../assets/images/654dcaa8ea37faf359496f5c_Look-book-04.jpg";
-import LookBook3 from "../../../assets/images/654dcaa7bec795e9851ed744_Look-book-05.jpg";
-import LookBook4 from "../../../assets/images/654dcaa7f5bb0633400e221d_Look-book-06.jpg";
-import Button from "../../../components/Button";
+import Background from "../../assets/images/658ff46442ecf1f76a1fdfc0_retailflow-brand-new-logo.svg";
+import LookBook1 from "../../assets/images/654dc55d6b3b83d9106b8fa2_Look-book-01.jpg";
+import LookBook2 from "../../assets/images/654dcaa8ea37faf359496f5c_Look-book-04.jpg";
+import LookBook3 from "../../assets/images/654dcaa7bec795e9851ed744_Look-book-05.jpg";
+import LookBook4 from "../../assets/images/654dcaa7f5bb0633400e221d_Look-book-06.jpg";
+import Button from "../Button";
 
 const Trendy = () => {
   return (

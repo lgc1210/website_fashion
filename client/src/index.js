@@ -7,10 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import { ToastProvider } from "./contexts/Toast";
+import paths from "./configs/paths";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={paths.home}>
     <Provider store={store}>
       <ToastProvider>
         <AuthProvider>
