@@ -108,5 +108,38 @@ def logout(request):
         )
         
 @api_view(["POST"])
+@permission_classes([AllowAny])
 def refresh(request):
-    return
+    try: 
+        refresh_token = request.data.get('refresh_token')
+        if not refresh_token:
+            return Response(
+                {'message': 'Refresh Token Is Required'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+            
+        try:
+            # Verify the refresh token and generate new tokens
+            token = RefreshToken(refresh_token)
+            access_token = str(token.access_token)
+            
+            return Response(
+                {
+                    'message': 'Token Refreshed Successfully',
+                    'access': access_token,
+                    'refresh': str(token)
+                },
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            # If the token is invalid, expired or blacklisted
+            return Response(
+            {'message': 'Invalid Refresh Token', 'error': str(e)},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+            
+    except Exception as e:
+        return Response(
+            {'message': 'Internal Server Error', 'error': str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )

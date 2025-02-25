@@ -25,7 +25,7 @@ def get_by_id(request):
 @api_view(['GET'])
 def get_all(request):
     try:
-        # Check permissions of the user
+        # Check user's permissions
         user_role = request.auth.get('role')
         isPermit = hasPermission('view_users', user_role)
 

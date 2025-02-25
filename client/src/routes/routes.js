@@ -142,7 +142,7 @@ const adminRoutes = [
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 const routes = [
-  { path: "/admin", Layout: AdminLayout, children: adminRoutes },
+  { path: paths.admin, Layout: AdminLayout, children: adminRoutes },
   { path: paths.profile, Layout: ProfileLayout, children: profileRoutes },
   { path: paths.home, Layout: CustomerLayout, children: customerRoutes },
   { path: paths.notFound, Layout: null, Page: NotFound },

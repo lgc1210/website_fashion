@@ -5,6 +5,7 @@ import Button from "../../components/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers } from "../../redux/users/usersSlice";
 import AdminSearchInput from "../../components/AdminSearchInput";
+import Loading from "../../components/Loading";
 
 const Users = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -50,6 +51,8 @@ const Users = () => {
   ];
 
   const handleEdit = async () => {};
+
+  if (loading) return <Loading color='#274b60' />;
 
   return (
     <section>

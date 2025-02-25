@@ -35,9 +35,9 @@ const RouteRendering = () => {
             <Route key={path} path={path} element={<Page />} />
           ) : (
             <Route key={path} path={path} element={<Layout />}>
-              {children.map(({ path: childPath, Page, isPublic }) => (
+              {children.map(({ path: childPath, Page, isPublic }, index) => (
                 <Route
-                  key={childPath}
+                  key={index}
                   path={childPath}
                   element={
                     isPublic ? <Page /> : <ProtectedRoute element={<Page />} />

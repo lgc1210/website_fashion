@@ -28,42 +28,51 @@ instance.interceptors.request.use(
 );
 
 instance.interceptors.response.use(
-  (response) => {
-    return response;
-  },
+  (response) => response,
   async (error) => {
-    // if (error.response?.status === 401) {
-    //   const refresh_token = getStoredRefreshToken();
-    //   if (refresh_token) {
-    //     const response = await userActions.refresh({ refresh_token });
+    const originalRequest = error.config;
 
-    //     if (response?.data?.access) {
-    //       storeTokens(response.data.access, response.data.refresh);
+    if (error.response?.status === 401) {
+      try {
+        const refresh_token = getStoredRefreshToken();
+        if (!refresh_token) {
+          clearTokens();
+          return Promise.reject(error);
+        }
 
-    //       error.config.headers[
-    //         "Authorization"
-    //       ] = `Bearer ${response?.data?.access}`;
+        const response = await axios.post(`${baseURL}/auth/refresh`, {
+          refresh_token,
+        });
 
-    //       return instance(error.config);
-    //     }
-    //   }
-    // }
+        if (response?.data?.access) {
+          storeTokens(response.data.access, response.data.refresh);
+          originalRequest.headers[
+            "Authorization"
+          ] = `Bearer ${response?.data?.access}`;
+
+          // Retry the original request
+          return instance(originalRequest);
+        }
+      } catch (error) {
+        clearTokens();
+        return Promise.reject(error);
+      }
+    }
     return Promise.reject(error);
   }
 );
 
 export const userActions = {
-  read: async () => await instance.get("users/get"),
-  create: async (payload) => await instance.post("users/create", payload),
-  update: async (payload) => await instance.post("users/update", payload),
-  delete: async (payload) => await instance.post("users/delete", payload),
-  login: async (payload) => await instance.post("auth/login", payload),
-  register: async (payload) => await instance.post("auth/register", payload),
+  read: async () => await instance.get("/users/get"),
+  create: async (payload) => await instance.post("/users/create", payload),
+  update: async (payload) => await instance.post("/users/update", payload),
+  delete: async (payload) => await instance.post("/users/delete", payload),
+  login: async (payload) => await instance.post("/auth/login", payload),
+  register: async (payload) => await instance.post("/auth/register", payload),
   logout: async () => {
     const refreshToken = getStoredRefreshToken();
-    return await instance.post("auth/logout", { refresh_token: refreshToken });
+    return await instance.post("/auth/logout", { refresh_token: refreshToken });
   },
-  // refresh: (payload) => instance.post("auth/refresh", payload),
 };
 
 export default instance;
